@@ -1,8 +1,10 @@
 {
-  "r.alwaysUseActiveTerminal": true,
+  "r.alwaysUseActiveTerminal": false,
   "r.sessionWatcher": true,
   "r.rterm.linux": "/usr/bin/R",
   "r.rpath.linux": "/usr/bin/R",
+  "r.bracketedPaste": true,
+  "r.plot.useHttpgd": true,
   "terminal.integrated.env.linux": {
     "R_PROFILE_USER": "${workspaceFolder}/.Rprofile"
   }
