@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "R: Run current file (renv)",
+      "type": "shell",
+      "command": "/usr/bin/R",
+      "args": [
+        "--quiet",
+        "--no-save",
+        "--no-restore",
+        "-e",
+        "source(normalizePath(Sys.getenv('VSFILE', unset='')))"
+      ],
+      "options": {
+        "env": {
+          "R_PROFILE_USER": "${workspaceFolder}/.Rprofile",
+          "VSFILE": "${file}"
+        },
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
