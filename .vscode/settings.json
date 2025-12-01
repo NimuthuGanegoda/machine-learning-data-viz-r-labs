@@ -1,0 +1,7 @@
+{
+  "r.alwaysUseActiveTerminal": true,
+  "r.sessionWatcher": true,
+  "terminal.integrated.env.linux": {
+    "R_PROFILE_USER": "${workspaceFolder}/.Rprofile"
+  }
+}

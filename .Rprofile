@@ -1,4 +1,8 @@
-source("renv/activate.R")
+try({
+  profile_path <- Sys.getenv("R_PROFILE_USER", unset = "")
+  root <- if (nzchar(profile_path)) dirname(profile_path) else getwd()
+  source(file.path(root, "renv/activate.R"))
+}, silent = TRUE)
 #### -- Consistent File Downloads -- ####
 if(.Platform$OS.type == "windows") {
   options(
