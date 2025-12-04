@@ -9,7 +9,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-library(tidyverse)
+# library(tidyverse)
 knitr::opts_chunk$set(fig.width = 8, fig.height = 6, dpi = 150)
 ```
 
@@ -17,61 +17,61 @@ knitr::opts_chunk$set(fig.width = 8, fig.height = 6, dpi = 150)
 
 ```{r}
 set.seed(1)
-scatter_df <- tibble(
+scatter_df <- data.frame(
   x = rnorm(200, mean = 50, sd = 10),
-  y = 0.8 * x + rnorm(200, sd = 8),
   group = sample(c("A", "B"), 200, replace = TRUE)
 )
+scatter_df$y <- 0.8 * scatter_df$x + rnorm(200, sd = 8)
 
-ggplot(scatter_df, aes(x = x, y = y, color = group)) +
-  geom_point(alpha = 0.7) +
-  geom_smooth(method = "lm", se = FALSE) +
-  labs(title = "Scatter with Trend", x = "X", y = "Y") +
-  theme_minimal()
+# Create color vector
+colors <- ifelse(scatter_df$group == "A", "red", "blue")
+plot(scatter_df$x, scatter_df$y, col = colors, pch = 19,
+     main = "Scatter with Trend", xlab = "X", ylab = "Y")
+legend("topleft", legend = c("A", "B"), col = c("red", "blue"), pch = 19)
+abline(lm(y ~ x, data = scatter_df[scatter_df$group == "A",]), col = "red", lwd = 2)
+abline(lm(y ~ x, data = scatter_df[scatter_df$group == "B",]), col = "blue", lwd = 2)
 ```
 
 # Category Counts (Bar)
 
 ```{r}
-bar_df <- tibble(
+bar_df <- data.frame(
   category = sample(LETTERS[1:6], 300, replace = TRUE)
-) %>%
-  count(category)
+)
+counts <- table(bar_df$category)
 
-ggplot(bar_df, aes(x = category, y = n, fill = category)) +
-  geom_col() +
-  labs(title = "Category Counts", x = "Category", y = "Count") +
-  theme_minimal() +
-  theme(legend.position = "none")
+barplot(counts, col = rainbow(length(counts)),
+        main = "Category Counts", xlab = "Category", ylab = "Count")
 ```
 
 # Time Series (Line)
 
 ```{r}
-line_df <- tibble(
+line_df <- data.frame(
   date = seq.Date(as.Date("2025-01-01"), by = "day", length.out = 120),
   value = cumsum(rnorm(120, mean = 0.2, sd = 1)) + 20
 )
 
-ggplot(line_df, aes(x = date, y = value)) +
-  geom_line(color = "steelblue") +
-  geom_smooth(method = "loess", se = FALSE, color = "tomato") +
-  labs(title = "Daily Metric", x = "Date", y = "Value") +
-  theme_minimal()
+plot(line_df$date, line_df$value, type = "l", col = "steelblue", lwd = 2,
+     main = "Daily Metric", xlab = "Date", ylab = "Value")
+loess_fit <- loess(value ~ as.numeric(date), data = line_df)
+lines(line_df$date, predict(loess_fit), col = "tomato", lwd = 2)
 ```
 
 # Faceted Small Multiples
 
 ```{r}
-facet_df <- tibble(
+t_vec <- rep(1:60, times = 4)
+facet_df <- data.frame(
   grp = rep(c("North", "South", "East", "West"), each = 60),
-  t = rep(1:60, times = 4),
-  metric = 10 + rep(c(2, -1, 0.5, 1.2), each = 60) * t + rnorm(240, sd = 5)
+  t = t_vec,
+  metric = 10 + rep(c(2, -1, 0.5, 1.2), each = 60) * t_vec + rnorm(240, sd = 5)
 )
 
-ggplot(facet_df, aes(x = t, y = metric)) +
-  geom_line() +
-  facet_wrap(~ grp, ncol = 2) +
-  labs(title = "Regional Trends", x = "Time", y = "Metric") +
-  theme_minimal()
+par(mfrow = c(2, 2))
+groups <- unique(facet_df$grp)
+for(g in groups) {
+  sub_df <- facet_df[facet_df$grp == g,]
+  plot(sub_df$t, sub_df$metric, type = "l", main = g, xlab = "Time", ylab = "Metric")
+}
 ```
