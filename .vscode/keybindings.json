@@ -1,0 +1,60 @@
+[
+  {
+    "key": "ctrl+shift+enter",
+    "command": "r.runCurrentLine",
+    "when": "editorTextFocus && editorLangId == r"
+  },
+  {
+    "key": "ctrl+shift+s",
+    "command": "r.runSelection",
+    "when": "editorTextFocus && editorLangId == r && editorHasSelection"
+  },
+  {
+    "key": "ctrl+shift+a",
+    "command": "r.runAllLine",
+    "when": "editorTextFocus && editorLangId == r"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "r.clearConsole",
+    "when": "editorTextFocus && editorLangId == r"
+  },
+  {
+    "key": "ctrl+shift+f10",
+    "command": "r.debugFile",
+    "when": "editorTextFocus && editorLangId == r"
+  },
+  {
+    "key": "ctrl+alt+i",
+    "command": "editor.action.insertSnippet",
+    "args": {
+      "snippet": "${1:var} <- function(${2:args}) {\n  ${0}\n}"
+    },
+    "when": "editorTextFocus && editorLangId == r"
+  },
+  {
+    "key": "alt+-",
+    "command": "editor.action.insertSnippet",
+    "args": {
+      "snippet": " <- "
+    },
+    "when": "editorTextFocus && editorLangId == r"
+  },
+  {
+    "key": "ctrl+shift+m",
+    "command": "editor.action.insertSnippet",
+    "args": {
+      "snippet": " |> "
+    },
+    "when": "editorTextFocus && editorLangId == r"
+  },
+  {
+    "key": "ctrl+shift+p",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "f2",
+    "command": "editor.action.rename",
+    "when": "editorTextFocus && editorLangId == r"
+  }
+]
