@@ -3,7 +3,7 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "REditorSupport.r",
     "editor.codeActionsOnSave": {
-      "source.fixAll.r": true
+      "source.fixAll.r": "explicit"
     },
     "editor.tabSize": 2,
     "editor.insertSpaces": true
