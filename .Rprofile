@@ -1,8 +1,11 @@
-try({
-  profile_path <- Sys.getenv("R_PROFILE_USER", unset = "")
-  root <- if (nzchar(profile_path)) dirname(profile_path) else getwd()
-  source(file.path(root, "renv/activate.R"))
-}, silent = TRUE)
+try(
+  {
+    profile_path <- Sys.getenv("R_PROFILE_USER", unset = "")
+    root <- if (nzchar(profile_path)) dirname(profile_path) else getwd()
+    source(file.path(root, "renv/activate.R"))
+  },
+  silent = TRUE
+)
 
 # ============================================================================
 # R Language Studio - VS Code Configuration
@@ -104,7 +107,7 @@ utils::rc.settings(
 
 cat("✓ VS Code R Language Studio ready\n")
 #### -- Consistent File Downloads -- ####
-if(.Platform$OS.type == "windows") {
+if (.Platform$OS.type == "windows") {
   options(
     download.file.method = "wininet"
   )
@@ -116,7 +119,7 @@ if(.Platform$OS.type == "windows") {
 
 #### -- Set CRAN -- ####
 options(
-  repos=c("https://cran.rstudio.com/")
+  repos = c("https://cran.rstudio.com/")
 )
 
 #### -- Factors Are Not Strings -- ####
@@ -163,4 +166,3 @@ options(
 #   library(fs)
 #   library(devtools)
 # }
-

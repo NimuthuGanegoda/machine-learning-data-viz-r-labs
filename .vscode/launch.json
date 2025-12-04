@@ -1,35 +1,44 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Launch R Script",
-      "type": "R-Debugger",
-      "request": "launch",
-      "debugMode": "debug",
-      "file": "${file}",
-      "cwd": "${workspaceFolder}",
-      "rterm": "/usr/bin/R",
-      "args": ["--vanilla", "--slave"]
-    },
-    {
-      "name": "Execute R Script",
-      "type": "R-Debugger",
-      "request": "launch",
-      "debugMode": "exec",
-      "file": "${file}",
-      "cwd": "${workspaceFolder}",
-      "rterm": "/usr/bin/R",
-      "args": ["--vanilla", "--slave"]
-    },
-    {
-      "name": "Debug R Package",
-      "type": "R-Debugger",
-      "request": "launch",
-      "debugMode": "debug",
-      "file": "${workspaceFolder}/R/*.R",
-      "cwd": "${workspaceFolder}",
-      "rterm": "/usr/bin/R",
-      "args": ["--vanilla", "--slave"]
-    }
-  ]
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch R Script",
+            "type": "R-Debugger",
+            "request": "launch",
+            "debugMode": "debug",
+            "file": "${file}",
+            "cwd": "${workspaceFolder}",
+            "rterm": "/usr/bin/R",
+            "args": [
+                "--vanilla",
+                "--slave"
+            ]
+        },
+        {
+            "name": "Execute R Script",
+            "type": "R-Debugger",
+            "request": "launch",
+            "debugMode": "exec",
+            "file": "${file}",
+            "cwd": "${workspaceFolder}",
+            "rterm": "/usr/bin/R",
+            "args": [
+                "--vanilla",
+                "--slave"
+            ]
+        },
+        {
+            "name": "Debug R Package",
+            "type": "R-Debugger",
+            "request": "launch",
+            "debugMode": "debug",
+            "file": "${workspaceFolder}/R/*.R",
+            "cwd": "${workspaceFolder}",
+            "rterm": "/usr/bin/R",
+            "args": [
+                "--vanilla",
+                "--slave"
+            ]
+        }
+    ]
 }
