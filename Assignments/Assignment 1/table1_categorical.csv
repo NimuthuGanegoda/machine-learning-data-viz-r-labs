@@ -1,0 +1,22 @@
+"Variable","Category","Count","Percentage.Var1","Percentage.Freq"
+"Port","25",106,"25",26.5
+"Port","80",68,"80",17
+"Port","443",166,"443",41.5
+"Port","993",52,"993",13
+"Port",NA,8,NA,2
+"Protocol","TCP",362,"TCP",90.5
+"Protocol","UDP",38,"UDP",9.5
+"Protocol",NA,0,NA,0
+"Target.Honeypot.Server.OS","Linux",1,"Linux",0.2
+"Target.Honeypot.Server.OS","MacOS (All)",156,"MacOS (All)",39
+"Target.Honeypot.Server.OS","Windows (Desktops)",240,"Windows (Desktops)",60
+"Target.Honeypot.Server.OS","Windows (Servers)",3,"Windows (Servers)",0.8
+"Target.Honeypot.Server.OS",NA,0,NA,0
+"Source.Port.Range","",144,"",36
+"Source.Port.Range",">8192",192,">8192",48
+"Source.Port.Range","1024-4096",6,"1024-4096",1.5
+"Source.Port.Range","4096-8192",58,"4096-8192",14.5
+"Source.Port.Range",NA,0,NA,0
+"APT","No",185,"No",46.2
+"APT","Yes",215,"Yes",53.8
+"APT",NA,0,NA,0

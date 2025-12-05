@@ -1,0 +1,5 @@
+"Variable","Missing_N","Missing_Pct","Min","Max","Mean","Median","Skewness"
+"Hits",0,0,68848,56405185,13142360.9,11011931,1.1
+"Attack.Source.IP.Address.Count",0,0,-1,290,78.1,63,0.9
+"Individual.URLs.requested",0,0,0,139,24.7,11.5,1.2
+"IP.Range.Trust.Score",335,83.8,-3.1,5.1,-0.3,-0.7,0.8
