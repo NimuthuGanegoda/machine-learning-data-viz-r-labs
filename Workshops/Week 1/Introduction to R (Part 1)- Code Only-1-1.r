@@ -1,10 +1,13 @@
-## ------------------------------------------------------------------------
-x <- 35
+library(tidyverse)
 
 
 ## ------------------------------------------------------------------------
-x
+x.1 <- 35
+x.2 <- 21
 
+## ------------------------------------------------------------------------
+x.1
+x.2
 
 ## ------------------------------------------------------------------------
 x <- 18
@@ -26,8 +29,14 @@ diam <- 10 # diameter = 10 cm
 radius <- diam / 2 # radius is half of the diameter
 area.circle <- pi * radius^2 # area of the circle
 
+diam
+radius
+area.circle # display the values of diameter, radius and area
 
 ## ------------------------------------------------------------------------
+# Data Types
+# Character
+
 "a"
 "abc123"
 "apples"
@@ -42,6 +51,7 @@ area.circle <- pi * radius^2 # area of the circle
 
 
 ## ------------------------------------------------------------------------
+# Numeric
 5.5
 2.75
 pi
@@ -60,11 +70,15 @@ log(5.5) # Natural log
 
 
 ## ------------------------------------------------------------------------
+# Integer
+
 5L # 5
 -3L #-3
 
 
 ## ------------------------------------------------------------------------
+# Logical
+
 5 == 5 # Does 5 equal 5?
 5 == 2 # Does 5 equal 2?
 5 != 2 # Does 5 not equal 2?;
@@ -81,6 +95,9 @@ log(5.5) # Natural log
 
 
 ## ------------------------------------------------------------------------
+# Data Structures
+# Vectors
+
 c() # A null vector
 c(1, 2, 3) # A numeric vector
 c("a", "b", "c") # A character vector
@@ -235,7 +252,7 @@ df
 
 
 ## ------------------------------------------------------------------------
-tib1 <- data.frame(Name, Age, Gender, Coffee.Drinker)
+tib1 <- tibble(Name, Age, Gender, Coffee.Drinker)
 tib1
 
 
@@ -245,7 +262,7 @@ str(df)
 
 ## ------------------------------------------------------------------------
 as.data.frame(tib1) # Convert the tibble, tib1, to a data frame
-# as_tibble(df)  #Convert the data frame, df, to a tibble
+as_tibble(df) # Convert the data frame, df, to a tibble
 
 
 ## ------------------------------------------------------------------------
