@@ -132,6 +132,8 @@ b / a # Divide the elements of vector b by the elements of vector a
 
 
 ## ------------------------------------------------------------------------
+# Factor
+
 f1 <- c(1:5)
 # A numeric vector
 f1 <- factor(f1)
@@ -155,6 +157,8 @@ f3
 
 
 ## ------------------------------------------------------------------------
+# Matrix
+
 Mat.A <- matrix(c(1:9), nrow = 3, ncol = 3, byrow = FALSE)
 Mat.A
 
@@ -204,6 +208,8 @@ Mat.A[, -1] # Access all data, except those in column 1
 
 
 ## ------------------------------------------------------------------------
+# Data Frames
+
 Name <- c("John", "Sarah", "Zach", "Beth", "Lachlan")
 # Name - Character vector
 Age <- c(35, 28, 33, 55, 43)
@@ -266,6 +272,8 @@ as_tibble(df) # Convert the data frame, df, to a tibble
 
 
 ## ------------------------------------------------------------------------
+# List
+
 list1 <- list(c, Mat.A, df)
 list1
 str(list1) # examine the structure of the list and its components.
@@ -291,6 +299,8 @@ list1$DatFrame # Access the data frame component
 
 
 ## ------------------------------------------------------------------------
+# Coercion of Data Types
+
 c(1, "a") # numeric value is coerced into a character
 c(TRUE, "a") # logical value coerced into a character
 c(TRUE, 1) # logical value is coerced into a numeric; 1 = TRUE, 0 = FALSE by default
