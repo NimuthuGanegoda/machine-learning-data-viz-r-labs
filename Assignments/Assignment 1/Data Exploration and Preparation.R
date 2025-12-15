@@ -1,3 +1,10 @@
+# ==============================================================================
+# Student Name: Nimuthu Ganegoda
+# Student ID:   10695889
+# Unit:         Machine Learning and Data Visualisation
+# Assignment:   Assignment 1 - Data Exploration and Preparation
+# ==============================================================================
+
 # --- STARTER CODE (modified per assignment) ---
 # dat <- read.csv("WACY-COM.csv", na.strings = "NA", stringsAsFactors = TRUE)
 # set.seed(Enter your student ID here)
