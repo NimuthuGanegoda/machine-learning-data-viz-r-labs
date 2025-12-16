@@ -2,9 +2,11 @@
 # Auto-generate all visualizations from R scripts in the repository
 
 # Install required packages if not available
-required_packages <- c("vegan", "tidyverse", "scales", "scatterplot3d", 
-                       "mlbench", "mvabund", "ggpubr", "factoextra", 
-                       "car", "corrplot", "cowplot", "forecast")
+required_packages <- c(
+  "vegan", "tidyverse", "scales", "scatterplot3d",
+  "mlbench", "mvabund", "ggpubr", "factoextra",
+  "car", "corrplot", "cowplot", "forecast"
+)
 
 for (pkg in required_packages) {
   if (!require(pkg, character.only = TRUE, quietly = TRUE)) {
@@ -18,17 +20,17 @@ cat("=== Starting Visualization Generation ===\n\n")
 # Function to safely run R scripts and capture plots
 run_and_visualize <- function(script_path, output_dir) {
   cat(paste0("Processing: ", script_path, "\n"))
-  
+
   # Create output directory
   dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
-  
+
   # Get script name without extension
   script_name <- tools::file_path_sans_ext(basename(script_path))
-  
+
   # Redirect all plots to PDF
   pdf_file <- file.path(output_dir, paste0(script_name, "_plots.pdf"))
   pdf(pdf_file, width = 12, height = 8)
-  
+
   tryCatch({
     # Source the script
     source(script_path, local = new.env())
