@@ -182,11 +182,15 @@ cat("Figure 1b saved\n")
 
 # Figure 2: APV histogram
 apv <- mydata$"Average.ping.variability"
-     xlab = "Average ping variability (st. dev.)",
-     ylab = "Count",
-     col = "steelblue",
-     border = "white",
-     breaks = 30)
+png(file.path(output_dir, "Figure2_APV_histogram.png"), width = 800, height = 600)
+par(mar = c(5, 4, 4, 2) + 0.1)
+hist(apv,
+  main = "Average ping variability",
+  xlab = "Average ping variability (st. dev.)",
+  ylab = "Count",
+  col = "steelblue",
+  border = "white",
+  breaks = 30)
 dev.off()
 cat("Figure 2 saved\n")
 
