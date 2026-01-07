@@ -143,7 +143,7 @@ cat("\n")
 # Determine number of PCs for 50% variance
 pcs_for_50 <- which(cumulative_var >= 0.50)[1]
 cat("Number of PCs needed to explain at least 50% variance:", pcs_for_50, "\n")
-cat("Cumulative variance with", pcs_for_50, "PC(s):", 
+cat("Cumulative variance with", pcs_for_50, "PC(s):",
     sprintf("%.3f", cumulative_var[pcs_for_50]), "\n\n")
 
 # (v) Display loadings for PC1, PC2, PC3 (3 decimal places) ------------------
@@ -257,7 +257,7 @@ pc2_separation <- abs(mean(pc2_known) - mean(pc2_unknown))
 
 if (pc1_separation > pc2_separation) {
   cat("CONCLUSION: PC1 better assists in classifying APT\n")
-  cat("Reason: Greater separation between Known and Unknown APT (", 
+  cat("Reason: Greater separation between Known and Unknown APT (",
       sprintf("%.3f", pc1_separation), " vs ", sprintf("%.3f", pc2_separation), ")\n\n")
   chosen_pc <- "PC1"
 } else {
