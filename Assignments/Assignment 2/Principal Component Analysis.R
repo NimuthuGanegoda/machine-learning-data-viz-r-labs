@@ -5,50 +5,29 @@
 # Assignment:   Assignment 2 - Principal Component Analysis
 # ==============================================================================
 
-# Setup and Configuration -----------------------------------------------------
-# Set up file paths - allows code to work on different computers
-# file_path_nimuthu <- "/home/nimuthu/Repo/machine-learning-data-viz-r-labs/Assignments/Assignment 2/WACY-COM.csv"
-# file_path_ashani <- "/home/ashani/Repo/machine-learning-data-viz-r-labs/Assignments/Assignment 2/WACY-COM.csv"
-
-# if (file.exists(file_path_nimuthu)) {
-#  file_path <- file_path_nimuthu
-#  output_dir <- "/home/nimuthu/Repo/machine-learning-data-viz-r-labs/Assignments/Assignment 2"
-# } else if (file.exists(file_path_ashani)) {
-#  file_path <- file_path_ashani
-#  output_dir <- "/home/ashani/Repo/machine-learning-data-viz-r-labs/Assignments/Assignment 2"
-# } else {
-#  stop("WACY-COM.csv not found in either location!")
-# }
-
-# cat("Reading data from:", file_path, "\n")
-# cat("Output will be saved to:", output_dir, "\n\n")
-
 # ==============================================================================
 # PART (i): Import the dataset into R Studio
 # ==============================================================================
-# Read WACY-COM dataset with 200,000 cyber attack records
-# na.strings=NA: treats empty cells as missing values
-# stringsAsFactors=TRUE: converts text columns to categorical factors
-dat <- read.csv(file_path, na.strings = NA, stringsAsFactors = TRUE)
-cat("Dataset loaded successfully.\n")
-cat("Original dataset dimensions:", nrow(dat), "rows x", ncol(dat), "columns\n\n")
+# You may need to change/include the path of your working directory
+# Import the dataset into R Studio.
+dat <- read.csv("WACY-COM.csv", na.strings = NA, stringsAsFactors = TRUE)
 
-# ==============================================================================
-# PART (ii): Generate sub-sample and extract features
-# ==============================================================================
-# Set seed to MY student ID (10695889) for reproducibility
-# This ensures I get the same 400 rows every time I run the code
-set.seed(10695889)
+set.seed(10695889) # Enter your student ID here
 
-# Randomly select 400 rows from the 200,000 total observations
-# replace=FALSE means we select each row only once (no duplicates)
+# Randomly select 400 rows
 selected.rows <- sample(1:nrow(dat), size = 400, replace = FALSE)
 
-# Create my personal sub-sample of 400 observations
+# Your sub-sample of 400 observations
 mydata <- dat[selected.rows, ]
-cat("Sub-sample created: 400 rows\n")
-cat("Dimensions check:", dim(mydata), "\n\n")
 
+dim(mydata) # check the dimension of your sub-sample
+
+# Set output directory for saving plots
+output_dir <- getwd() # Use current working directory
+
+# ==============================================================================
+# PART (ii): Extract only the numeric features and the APT feature
+# ==============================================================================
 # Extract the 7 continuous numeric features from Assignment 1
 # PLUS the APT target variable (needed for visualization later)
 my_extracted_data <- mydata[, c(
@@ -61,19 +40,15 @@ my_extracted_data <- mydata[, c(
   "Individual.URLs.requested", # Diversity of requests
   "APT" # Target: Yes/No APT activity
 )]
-cat("Extracted features:", ncol(my_extracted_data) - 1, "numeric + 1 target (APT)\n\n")
 
 # ==============================================================================
 # PART (iii): Clean the extracted data based on Assignment 1 feedback
 # ==============================================================================
-cat("=== Data Cleaning ===\n")
-
 # Step 1: Remove outliers/invalid data
 # APTAIP value of 99999 = missing/invalid ping data (identified in Assignment 1)
 rows_before <- nrow(my_extracted_data)
 clean_data <- my_extracted_data[my_extracted_data$Average.ping.to.attacking.IP.milliseconds != 99999, ]
 rows_removed <- rows_before - nrow(clean_data)
-cat("Removed", rows_removed, "rows with APTAIP = 99999\n")
 
 # Step 2: Apply log transformations to fix skewness
 # APV and APTAIP were highly right-skewed (long tail to the right) in Assignment 1
@@ -81,7 +56,6 @@ cat("Removed", rows_removed, "rows with APTAIP = 99999\n")
 # We add +1 before taking log to handle any zero values (log(0) is undefined)
 clean_data$log_APV <- log(clean_data$Average.ping.variability + 1)
 clean_data$log_APTAIP <- log(clean_data$Average.ping.to.attacking.IP.milliseconds + 1)
-cat("Applied log transformations to APV and APTAIP\n\n")
 
 # ==============================================================================
 # PART (iv): Remove incomplete cases
@@ -89,17 +63,10 @@ cat("Applied log transformations to APV and APTAIP\n\n")
 # PCA requires complete data - no missing values allowed
 # na.omit() removes any rows that have NA (missing) values in any column
 pca_ready_data <- na.omit(clean_data)
-cat("Removed incomplete cases:", rows_before - nrow(pca_ready_data), "rows\n")
-cat(
-  "Final dataset for PCA:", nrow(pca_ready_data), "rows (~",
-  round(nrow(pca_ready_data) / 400 * 100, 1), "% of original 400)\n\n"
-)
 
 # ==============================================================================
 # PART (v): Perform PCA using prcomp() - only on numeric features
 # ==============================================================================
-cat("=== Performing Principal Component Analysis ===\n")
-
 # ---------------
 # SCALING DECISION: WHY we MUST scale (scale=TRUE)
 # ---------------
@@ -130,8 +97,6 @@ pca_final <- prcomp(
   pca_ready_data[, pca_features],
   scale = TRUE # Standardize features before PCA
 )
-
-cat("PCA completed successfully with", length(pca_features), "features\n\n")
 
 # Display PCA Summary
 cat("=== PCA Summary ===\n")
