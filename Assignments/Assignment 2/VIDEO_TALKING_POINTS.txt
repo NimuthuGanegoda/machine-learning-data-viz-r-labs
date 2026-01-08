@@ -1,0 +1,104 @@
+==============================================================================
+ASSIGNMENT 2 - VIDEO PRESENTATION TALKING POINTS
+==============================================================================
+
+QUESTION 1: Why should/shouldn't data be scaled when performing PCA?
+----------------------------------------------------------------------
+ANSWER: YES, we SHOULD scale the data
+
+REASON:
+- Our features have different units and ranges
+  • Hits: millions of requests
+  • Entropy: 0-8 bits
+  • Attack Window: seconds to hours
+  • Request Size: bytes
+
+- WITHOUT scaling: Large-range variables dominate PCA
+- WITH scaling: All features get equal weight (mean=0, sd=1)
+
+CODE LOCATION: Line ~100 (Part v - Scaling Decision)
+
+
+QUESTION 2: Display & describe variance explained (3 decimal places)
+----------------------------------------------------------------------
+ANSWER: See variance table in output
+
+Individual variance:
+- PC1: 0.319 (31.9%)
+- PC2: 0.242 (24.2%)
+- PC3: 0.156 (15.6%)
+- etc.
+
+Cumulative variance:
+- PC1: 0.319 (31.9% total)
+- PC1+PC2: 0.561 (56.1% total)
+- PC1+PC2+PC3: 0.717 (71.7% total)
+
+CODE LOCATION: Line ~145 (Variance Explained section)
+
+
+QUESTION 3: How many PCs needed for at least 50% variance?
+----------------------------------------------------------------------
+ANSWER: 2 principal components are adequate
+
+- They explain 0.561 (56.1%) of total variance
+- PC1 alone: 31.9%
+- PC2 adds: 24.2%
+- Together: 56.1% ✓
+
+CODE LOCATION: Line ~165 (50% variance calculation)
+
+
+QUESTION 4: Display & interpret loadings for PC1, PC2, PC3 (3 decimals)
+----------------------------------------------------------------------
+See loadings table in output - all shown to 3 decimal places
+
+PC1 KEY DRIVERS (attack characteristics):
+- Average.Request.Size.Bytes (0.607)
+- Attack.Window.Seconds (0.591)
+- Average.Attacker.Payload.Entropy.Bits (0.403)
+- Individual.URLs.requested (0.325)
+
+PC2 KEY DRIVERS (network behavior):
+- log_APV (0.697)
+- log_APTAIP (0.682)
+
+PC3 KEY DRIVERS (attack volume vs diversity):
+- Hits (-0.715) - negative loading
+- Average.Attacker.Payload.Entropy.Bits (-0.518)
+- Individual.URLs.requested (0.388)
+
+INTERPRETATION:
+- PC1 captures payload/temporal attack characteristics
+- PC2 captures network latency/connectivity patterns
+- PC3 captures volume vs. complexity trade-offs
+
+CODE LOCATION: Line ~170 (Loadings section)
+
+
+PART (vi): Biplot Interpretation
+----------------------------------------------------------------------
+- Red points = APT attacks (Yes)
+- Blue points = Non-APT (No)
+- Arrows = feature contributions
+- Separation visible in PC1 direction
+
+
+PART (vii): Classification Decision
+----------------------------------------------------------------------
+QUESTION: Which PC better classifies APT?
+
+ANSWER: PC1 better assists in classifying APT
+
+EVIDENCE:
+- PC1 separation: 1.082
+- PC2 separation: 0.148
+- PC1 shows 7× greater separation between APT=Yes and APT=No
+
+KEY FEATURES for classification (from PC1):
+- Average.Request.Size.Bytes
+- Attack.Window.Seconds
+- Average.Attacker.Payload.Entropy.Bits
+- Individual.URLs.requested
+
+==============================================================================
