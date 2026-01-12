@@ -5,7 +5,7 @@
 # Assignment:   Assignment 3 - Supervised Learning Modelling
 # ==============================================================================
 
-# 1. SETUP & LIBRARIES 
+# 1. SETUP & LIBRARIES
 if(!require(tidyverse)) install.packages("tidyverse")
 if(!require(caret)) install.packages("caret")
 if(!require(glmnet)) install.packages("glmnet")
@@ -35,7 +35,7 @@ dat$IP.Range.Trust.Score <- NULL
 dat <- dat %>% filter(Average.ping.to.attacking.IP.milliseconds != 99999)
 dat <- dat %>% filter(Attack.Source.IP.Address.Count != -1)
 
-# ii. Merging Categories exactly as required 
+# ii. Merging Categories exactly as required
 dat$Source.OS.Detected <- fct_collapse(dat$Source.OS.Detected,
     Windows_All = c("Windows 10", "Windows Server 2008")
 )
@@ -65,7 +65,7 @@ test_data  <- WACY_COM_cleaned[-trainIndex, ]
 # PART 2: MODELLING & SIMULTANEOUS TUNING [cite: 77-85]
 # ==============================================================================
 
-# Setup Training Control: 5-Fold Repeated CV (Min 2 repeats) 
+# Setup Training Control: 5-Fold Repeated CV (Min 2 repeats)
 fitControl <- trainControl(method = "repeatedcv", number = 5, repeats = 2)
 
 # --- MODEL 1: LOGISTIC RIDGE REGRESSION ---
@@ -82,13 +82,13 @@ model_tree <- train(APT ~ ., data = train_data, method = "rpart",
 
 # --- MODEL 3: RANDOM FOREST (SIMULTANEOUS TUNING)  ---
 set.seed(MY_SEED)
-rf_grid <- expand.grid(mtry = c(2, 4, 6), 
-                       splitrule = "gini", 
+rf_grid <- expand.grid(mtry = c(2, 4, 6),
+                       splitrule = "gini",
                        min.node.size = c(1, 5, 10))
 
 model_rf <- train(APT ~ ., data = train_data, method = "ranger",
                   trControl = fitControl, tuneGrid = rf_grid,
-                  num.trees = 500) 
+                  num.trees = 500)
 
 # ==============================================================================
 # PART 3: EVALUATION [cite: 86-89]
@@ -97,3 +97,38 @@ model_rf <- train(APT ~ ., data = train_data, method = "ranger",
 # Confusion Matrix for the best model (Example: RF)
 preds_rf <- predict(model_rf, newdata = test_data)
 confusionMatrix(preds_rf, test_data$APT)
+
+# ==============================================================================
+# PART 4: FINAL PERFORMANCE TABLE
+# ==============================================================================
+
+# 1. Generate Confusion Matrices for each model
+cm_ridge <- confusionMatrix(predict(model_ridge, test_data), test_data$APT)
+cm_tree  <- confusionMatrix(predict(model_tree, test_data), test_data$APT)
+cm_rf    <- confusionMatrix(predict(model_rf, test_data), test_data$APT)
+
+# 2. Extract metrics into a clean table
+performance_table <- data.frame(
+  Metric = c("Accuracy", "Sensitivity (APT)", "Specificity"),
+  
+  Logistic_Ridge = c(
+    round(cm_ridge$overall["Accuracy"], 4),
+    round(cm_ridge$byClass["Sensitivity"], 4),
+    round(cm_ridge$byClass["Specificity"], 4)
+  ),
+  
+  Classification_Tree = c(
+    round(cm_tree$overall["Accuracy"], 4),
+    round(cm_tree$byClass["Sensitivity"], 4),
+    round(cm_tree$byClass["Specificity"], 4)
+  ),
+  
+  Random_Forest = c(
+    round(cm_rf$overall["Accuracy"], 4),
+    round(cm_rf$byClass["Sensitivity"], 4),
+    round(cm_rf$byClass["Specificity"], 4)
+  )
+)
+
+# 3. Print the table to the console
+print(performance_table)
