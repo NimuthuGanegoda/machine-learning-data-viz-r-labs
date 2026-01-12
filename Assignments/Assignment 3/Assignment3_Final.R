@@ -46,13 +46,15 @@ dat <- dat[dat$Average.ping.to.attacking.IP.milliseconds != 99999, ]
 dat <- dat[dat$Attack.Source.IP.Address.Count != -1, ]
 
 # Merge factor categories
-dat$Source.OS.Detected <- factor(dat$Source.OS.Detected, 
+dat$Source.OS.Detected <- factor(dat$Source.OS.Detected,
     levels = c("Windows 10", "Windows Server 2008", "Linux (>4.0)", "Linux (2.6.3)", "MacOS (Unknown)"),
-    labels = c("Windows", "Windows", "Linux", "Linux", "MacOS"))
+    labels = c("Windows", "Windows", "Linux", "Linux", "MacOS")
+)
 
 dat$Target.Honeypot.Server.OS <- factor(dat$Target.Honeypot.Server.OS,
     levels = c("Windows (Desktops)", "Windows (Servers)", "Linux", "MacOS (All)"),
-    labels = c("Windows", "Windows", "Unix", "Unix"))
+    labels = c("Windows", "Windows", "Unix", "Unix")
+)
 
 # Feature transformations
 dat$log_APV <- log(dat$Average.ping.variability + 1)
@@ -128,8 +130,10 @@ print(cm_lasso)
 cat("\nTraining Classification Tree...\n")
 
 # Train decision tree
-model_tree <- rpart(APT ~ ., data = train_data, method = "class", 
-                    control = rpart.control(cp = 0.001))
+model_tree <- rpart(APT ~ .,
+    data = train_data, method = "class",
+    control = rpart.control(cp = 0.001)
+)
 
 # Predictions
 pred_tree <- predict(model_tree, test_data, type = "class")
