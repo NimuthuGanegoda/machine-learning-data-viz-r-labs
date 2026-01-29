@@ -1,0 +1,140 @@
+age,country,gender,death,hosp_visit
+58,China,male,No,Yes
+44,China,female,No,No
+34,China,male,No,No
+37,China,male,No,Yes
+39,China,male,No,Yes
+56,China,male,No,Yes
+18,China,female,No,Yes
+32,China,female,No,Yes
+50,China,male,No,No
+29,China,male,No,Yes
+28,China,male,No,No
+33,China,female,No,Yes
+36,China,male,No,No
+36,China,female,No,No
+89,China,male,Yes,No
+48,China,female,Yes,No
+66,China,male,Yes,Yes
+82,China,female,Yes,Yes
+59,China,male,No,Yes
+50,China,female,No,Yes
+43,China,male,No,Yes
+42,China,male,No,Yes
+46,China,male,No,No
+69,China,female,Yes,Yes
+73,China,male,Yes,Yes
+70,China,female,Yes,Yes
+65,China,female,Yes,Yes
+29,China,female,No,Yes
+49,China,male,No,Yes
+56,China,female,No,Yes
+79,China,male,Yes,Yes
+87,China,male,Yes,Yes
+58,China,male,Yes,Yes
+67,China,female,Yes,Yes
+59,China,female,No,No
+46,China,male,No,Yes
+20,China,female,No,Yes
+24,China,female,No,No
+40,China,male,No,Yes
+28,China,male,No,Yes
+27,China,male,No,Yes
+32,China,female,No,Yes
+58,China,female,No,Yes
+31,China,male,No,Yes
+68,China,female,No,Yes
+36,China,female,No,Yes
+38,China,male,No,Yes
+36,China,female,No,Yes
+48,China,male,No,Yes
+41,China,female,No,Yes
+35,Japan,female,No,Yes
+45,Japan,male,No,Yes
+45,Japan,female,No,Yes
+55,Japan,female,No,Yes
+45,Japan,male,No,Yes
+45,Japan,male,No,Yes
+25,Japan,male,No,Yes
+75,Japan,male,No,Yes
+55,Japan,male,No,Yes
+55,Japan,male,No,Yes
+65,Japan,male,No,No
+55,Japan,male,No,Yes
+35,Japan,male,No,Yes
+45,Japan,male,No,Yes
+85,Japan,male,No,No
+45,Japan,female,No,Yes
+55,Japan,male,No,Yes
+65,Japan,male,No,Yes
+25,Japan,female,No,Yes
+65,Japan,female,No,Yes
+55,Japan,female,No,Yes
+65,Japan,male,No,Yes
+55,Japan,male,No,Yes
+75,Japan,male,No,No
+45,Japan,male,No,Yes
+35,Japan,male,No,No
+65,Japan,female,No,No
+75,Japan,male,No,No
+85,Japan,male,No,No
+55,Japan,male,No,Yes
+55,Japan,male,No,No
+75,Japan,male,No,No
+75,Japan,male,No,Yes
+55,Japan,male,No,Yes
+55,Japan,female,No,Yes
+55,Japan,male,No,Yes
+45,Japan,male,No,Yes
+55,Japan,male,No,Yes
+35,Japan,male,No,Yes
+45,Japan,male,No,Yes
+45,Japan,male,No,Yes
+5,Japan,male,No,Yes
+55,South Korea,male,No,Yes
+54,South Korea,male,No,Yes
+32,South Korea,male,No,No
+28,South Korea,female,No,No
+43,South Korea,male,No,No
+37,South Korea,male,No,Yes
+28,South Korea,male,No,No
+73,South Korea,female,No,No
+82,South Korea,male,No,Yes
+61,South Korea,female,No,Yes
+40,South Korea,female,No,No
+49,South Korea,male,No,No
+72,South Korea,female,No,No
+58,South Korea,male,No,No
+76,South Korea,male,No,No
+75,South Korea,male,No,No
+30,South Korea,male,No,No
+26,South Korea,female,No,No
+34,South Korea,female,No,No
+50,South Korea,female,No,No
+56,South Korea,female,No,No
+49,South Korea,male,No,No
+55,South Korea,male,No,No
+65,South Korea,female,No,No
+64,South Korea,male,No,No
+36,South Korea,male,Yes,No
+73,Hong Kong,female,No,Yes
+37,Hong Kong,female,No,Yes
+72,Hong Kong,female,No,Yes
+58,Hong Kong,male,No,Yes
+24,Hong Kong,male,No,Yes
+22,Hong Kong,male,No,No
+55,Hong Kong,female,No,Yes
+63,Hong Kong,female,No,Yes
+37,Hong Kong,male,No,Yes
+37,Hong Kong,female,No,Yes
+41,Hong Kong,female,No,No
+54,Hong Kong,male,No,Yes
+58,Hong Kong,male,No,No
+75,Hong Kong,male,No,Yes
+80,Hong Kong,female,No,Yes
+59,Hong Kong,female,No,No
+57,Hong Kong,female,No,No
+24,Hong Kong,male,No,No
+49,Hong Kong,female,No,Yes
+80,Hong Kong,male,No,Yes
+89,Hong Kong,female,No,Yes

@@ -1,0 +1,51 @@
+Subject,Gender,Age,WCC,CRP,Complication
+1,Female,18,17,390,Complication
+2,Male,22,9.21,11,No complication
+3,Male,37,9.7,75,Complication
+4,Male,55,14.2,46,No complication
+5,Male,48,24.5,21,No complication
+6,Female,15,15.9,14,No complication
+7,Male,17,18.9,2.4,No complication
+8,Female,48,7.74,28,No complication
+9,Female,56,20.4,80,Complication
+10,Female,14,11.5,5,No complication
+11,Female,33,12.9,234,Complication
+12,Male,23,8.84,1.6,No complication
+13,Male,42,21.2,322,Complication
+14,Female,44,9.87,2.4,No complication
+15,Male,53,19.6,15,Complication
+16,Male,21,15.9,7,No complication
+17,Female,42,14.1,12,No complication
+18,Female,21,12.7,69,No complication
+20,Female,39,17.4,,No complication
+21,Male,40,20.9,5,No complication
+22,Male,16,9.7,6,No complication
+23,Male,23,4.7,8,No complication
+24,Male,26,22.9,94,Complication
+25,Female,29,11.2,48,No complication
+26,Female,26,12.3,6,No complication
+27,Female,84,18.4,69,No complication
+28,Male,21,11.3,78,No complication
+29,Male,47,,,Complication
+30,Male,15,13.1,15,Complication
+31,Male,32,16.5,1.2,No complication
+32,Male,17,28.1,8,Complication
+33,Male,18,11.6,71,Complication
+34,Male,31,10.8,48,No complication
+35,Female,33,18.5,16,No complication
+36,Male,43,24,2.8,No complication
+37,Male,45,13.8,5,Complication
+38,Male,71,8.54,160,Complication
+39,Female,18,11.2,85,No complication
+40,Male,43,14.9,2.9,Complication
+41,Male,37,19.2,13,No complication
+42,Female,38,13,395,Complication
+43,Male,44,5.9,2.3,No complication
+44,Male,51,18.3,342,Complication
+45,Male,44,12.1,30,No complication
+46,Male,65,14.1,350,Complication
+47,Male,20,21.2,170,Complication
+48,Male,18,16.6,14,No complication
+49,Male,39,18.9,26,Complication
+50,Female,60,16.4,140,Complication
+51,Female,16,14.6,1.6,No complication

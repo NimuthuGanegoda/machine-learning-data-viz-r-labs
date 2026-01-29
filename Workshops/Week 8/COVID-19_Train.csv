@@ -1,0 +1,422 @@
+age,country,gender,death,hosp_visit
+66,China,male,No,Yes
+56,China,female,No,Yes
+46,China,male,No,Yes
+60,China,female,No,Yes
+37,China,male,No,Yes
+51,China,male,No,No
+57,China,male,No,No
+56,China,male,No,No
+52,China,female,No,Yes
+33,China,male,No,Yes
+40,China,male,No,Yes
+70,China,male,No,Yes
+51,China,male,No,Yes
+28,China,female,No,No
+37,China,male,No,No
+19,China,male,No,No
+66,China,female,No,Yes
+46,China,male,No,No
+32,China,female,No,No
+55,China,male,No,No
+68,China,male,No,Yes
+38,China,male,No,No
+72,China,male,No,No
+45,China,male,No,Yes
+42,China,male,No,No
+33,China,female,No,Yes
+37,China,male,No,No
+69,China,male,No,No
+63,China,male,No,Yes
+62,China,female,No,Yes
+49,China,male,No,Yes
+50,China,male,No,No
+48,China,male,No,No
+61,China,male,Yes,Yes
+69,China,male,Yes,Yes
+89,China,male,Yes,Yes
+66,China,male,Yes,Yes
+75,China,male,Yes,Yes
+82,China,male,Yes,Yes
+81,China,male,Yes,Yes
+65,China,male,Yes,Yes
+80,China,female,Yes,Yes
+53,China,male,Yes,Yes
+86,China,male,Yes,Yes
+70,China,female,Yes,Yes
+84,China,male,Yes,Yes
+50,China,female,No,No
+40,China,male,No,Yes
+45,China,male,No,Yes
+66,China,female,No,Yes
+23,China,female,No,Yes
+49,China,male,No,No
+32,China,female,No,Yes
+22,China,male,No,Yes
+47,China,male,No,No
+52,China,male,No,No
+53,China,male,No,No
+85,China,female,Yes,No
+36,China,male,Yes,Yes
+81,China,male,Yes,Yes
+42,China,male,No,Yes
+30,China,male,No,Yes
+23,China,male,No,Yes
+39,China,male,No,No
+39,China,female,No,Yes
+34,China,female,No,Yes
+49,China,male,No,Yes
+70,China,male,Yes,Yes
+76,China,female,Yes,No
+72,China,male,Yes,Yes
+55,China,male,Yes,Yes
+66,China,female,Yes,Yes
+58,China,male,Yes,Yes
+66,China,male,Yes,Yes
+78,China,male,Yes,Yes
+67,China,male,Yes,Yes
+65,China,male,Yes,Yes
+82,China,female,Yes,Yes
+49,China,female,No,Yes
+2,China,female,No,Yes
+57,China,male,No,No
+68,China,female,No,No
+40,China,male,No,No
+56,China,male,No,Yes
+29,China,female,No,Yes
+29,China,male,No,Yes
+57,China,male,No,Yes
+30,China,male,No,Yes
+33,China,female,No,Yes
+28,China,male,No,Yes
+41,China,male,No,Yes
+46,China,male,No,No
+45,China,female,No,No
+9,China,female,No,No
+15,China,male,No,Yes
+42,China,female,No,Yes
+24,China,male,No,Yes
+34,China,male,No,Yes
+63,China,male,No,Yes
+58,China,male,No,Yes
+49,China,male,No,Yes
+33,China,male,No,Yes
+55,China,female,No,Yes
+79,China,female,No,Yes
+19,China,female,No,Yes
+39,China,female,No,Yes
+21,China,female,No,Yes
+30,China,female,No,No
+64,China,female,No,Yes
+44,China,male,No,Yes
+70,China,female,No,No
+52,China,female,No,No
+32,China,female,No,Yes
+33,China,male,No,No
+71,China,male,No,Yes
+48,China,female,No,Yes
+19,China,female,No,Yes
+71,China,male,No,Yes
+35,China,male,No,Yes
+4,China,female,No,Yes
+38,China,male,No,Yes
+69,China,female,No,Yes
+50,China,male,No,Yes
+78,China,male,No,Yes
+49,China,male,No,Yes
+34,China,male,No,No
+55,China,female,No,Yes
+65,China,male,No,Yes
+18,China,male,No,Yes
+50,China,male,No,Yes
+40,China,female,No,Yes
+63,China,female,No,Yes
+47,China,female,No,Yes
+42,China,female,No,Yes
+39,China,male,No,Yes
+31,China,male,No,Yes
+27,China,male,No,Yes
+28,China,female,No,Yes
+51,China,female,No,Yes
+37,China,male,No,Yes
+35,Japan,male,No,Yes
+45,Japan,male,No,Yes
+45,Japan,male,No,Yes
+65,Japan,male,No,Yes
+45,Japan,female,No,Yes
+55,Japan,male,No,No
+55,Japan,male,No,Yes
+35,Japan,female,No,Yes
+25,Japan,female,No,Yes
+25,Japan,female,No,Yes
+45,Japan,male,No,No
+45,Japan,male,No,Yes
+35,Japan,male,No,No
+35,Japan,female,No,Yes
+55,Japan,male,No,Yes
+25,Japan,male,No,Yes
+55,Japan,male,No,No
+25,Japan,male,No,No
+55,Japan,male,No,Yes
+85,Japan,female,Yes,Yes
+75,Japan,male,No,Yes
+55,Japan,male,No,Yes
+75,Japan,male,Yes,Yes
+65,Japan,female,No,Yes
+55,Japan,female,No,Yes
+65,Japan,male,No,Yes
+35,Japan,male,No,Yes
+55,Japan,female,No,No
+65,Japan,male,No,No
+65,Japan,female,No,Yes
+65,Japan,female,No,No
+45,Japan,male,No,No
+35,Japan,male,No,Yes
+65,Japan,male,No,Yes
+65,Japan,male,No,Yes
+65,Japan,male,No,Yes
+85,Japan,female,No,Yes
+55,Japan,female,No,Yes
+55,Japan,male,No,Yes
+45,Japan,female,No,Yes
+65,Japan,male,No,Yes
+85,Japan,male,Yes,No
+25,Japan,male,No,No
+55,Japan,male,No,No
+65,Japan,male,No,No
+85,Japan,male,No,No
+75,Japan,male,No,No
+65,Japan,male,No,Yes
+65,Japan,male,No,Yes
+65,Japan,male,No,Yes
+75,Japan,male,No,No
+75,Japan,female,No,No
+75,Japan,female,No,No
+55,Japan,female,No,Yes
+55,Japan,male,No,No
+65,Japan,male,No,Yes
+45,Japan,male,No,No
+75,Japan,female,No,Yes
+85,Japan,male,No,Yes
+85,Japan,male,No,Yes
+65,Japan,female,No,No
+5,Japan,male,No,Yes
+15,Japan,male,No,Yes
+55,Japan,female,No,No
+75,Japan,female,No,No
+55,Japan,female,No,No
+85,Japan,male,No,Yes
+75,Japan,male,No,Yes
+25,Japan,female,No,Yes
+55,Japan,male,No,Yes
+65,Japan,male,No,Yes
+45,Japan,male,No,Yes
+55,Japan,female,No,Yes
+75,Japan,female,No,Yes
+85,Japan,male,Yes,Yes
+75,Japan,male,No,Yes
+55,Japan,female,No,Yes
+15,Japan,female,No,Yes
+55,Japan,female,No,Yes
+65,Japan,male,No,No
+65,Japan,female,No,Yes
+46,Japan,female,No,Yes
+65,Japan,male,No,Yes
+65,Japan,male,No,Yes
+65,Japan,female,No,Yes
+55,Japan,male,No,Yes
+75,Japan,female,No,Yes
+75,Japan,male,No,Yes
+25,Japan,male,No,No
+35,Japan,female,No,No
+45,Japan,female,No,No
+25,Japan,female,No,No
+55,Japan,female,No,No
+55,Japan,male,No,Yes
+65,Japan,male,No,Yes
+75,Japan,female,No,Yes
+55,Japan,male,No,Yes
+25,Japan,female,No,Yes
+55,Japan,male,No,Yes
+45,Japan,male,No,No
+35,Japan,male,No,No
+55,Japan,female,No,No
+25,Japan,female,No,No
+25,Japan,female,No,Yes
+65,Japan,male,No,Yes
+55,Japan,male,No,Yes
+65,Japan,female,No,Yes
+65,Japan,female,No,Yes
+55,Japan,female,No,No
+75,Japan,female,No,Yes
+75,Japan,female,No,Yes
+45,Japan,female,No,Yes
+55,Japan,male,No,Yes
+65,Japan,male,No,Yes
+75,Japan,male,No,No
+25,Japan,male,No,Yes
+25,Japan,female,No,Yes
+75,Japan,male,No,No
+75,Japan,female,No,Yes
+75,Japan,female,No,Yes
+45,Japan,male,No,Yes
+65,Japan,male,No,Yes
+45,Japan,female,No,Yes
+85,Japan,male,No,No
+75,Japan,male,No,No
+55,Japan,male,No,Yes
+65,Japan,male,No,Yes
+75,Japan,male,No,Yes
+75,Japan,female,No,Yes
+55,Japan,male,No,Yes
+60,Japan,female,No,No
+55,Japan,male,No,Yes
+75,Japan,male,No,Yes
+65,Japan,male,No,Yes
+35,Japan,male,No,Yes
+5,Japan,male,No,Yes
+85,Japan,male,No,Yes
+35,Japan,male,No,Yes
+85,Japan,male,No,Yes
+65,Japan,male,No,Yes
+45,Japan,female,No,No
+65,Japan,female,No,Yes
+65,Japan,male,No,Yes
+35,South Korea,female,No,Yes
+55,South Korea,male,No,Yes
+56,South Korea,male,No,No
+28,South Korea,male,No,No
+62,South Korea,female,No,No
+52,South Korea,female,No,No
+25,South Korea,male,No,No
+48,South Korea,male,No,Yes
+28,South Korea,male,No,No
+40,South Korea,female,No,No
+42,South Korea,female,No,No
+21,South Korea,female,No,No
+36,South Korea,male,No,No
+41,South Korea,female,No,No
+59,South Korea,female,No,No
+46,South Korea,male,No,No
+58,South Korea,female,No,No
+51,South Korea,male,No,No
+37,South Korea,female,No,No
+30,South Korea,female,No,No
+68,South Korea,female,No,No
+11,South Korea,female,No,No
+24,South Korea,male,No,No
+26,South Korea,female,No,No
+48,South Korea,female,No,No
+57,South Korea,female,Yes,No
+61,South Korea,female,No,No
+77,South Korea,male,No,No
+69,South Korea,female,No,No
+29,South Korea,female,No,No
+58,South Korea,female,No,No
+46,South Korea,female,No,No
+54,South Korea,female,No,No
+28,South Korea,male,No,No
+63,South Korea,female,No,No
+61,South Korea,female,No,No
+24,South Korea,male,No,No
+38,South Korea,female,No,No
+57,South Korea,male,Yes,No
+59,South Korea,male,Yes,No
+59,South Korea,female,No,No
+58,South Korea,female,No,No
+60,South Korea,male,No,No
+52,South Korea,female,No,No
+59,South Korea,female,No,No
+22,South Korea,male,No,No
+30,South Korea,female,No,No
+56,South Korea,female,No,No
+29,South Korea,male,No,No
+48,South Korea,female,No,No
+39,South Korea,female,No,No
+20,South Korea,female,No,No
+23,South Korea,female,No,No
+36,South Korea,male,No,No
+57,South Korea,female,No,No
+22,South Korea,female,No,No
+34,South Korea,female,No,No
+67,South Korea,male,No,No
+74,South Korea,male,Yes,No
+35,South Korea,male,No,No
+62,South Korea,male,Yes,No
+58,South Korea,male,Yes,No
+62,South Korea,male,No,Yes
+41,South Korea,male,Yes,No
+69,South Korea,female,No,No
+75,South Korea,male,Yes,No
+39,Hong Kong,male,No,Yes
+56,Hong Kong,male,No,Yes
+62,Hong Kong,female,No,Yes
+62,Hong Kong,female,No,Yes
+63,Hong Kong,male,No,Yes
+47,Hong Kong,male,No,Yes
+68,Hong Kong,female,No,Yes
+64,Hong Kong,male,No,Yes
+72,Hong Kong,male,No,Yes
+75,Hong Kong,male,No,Yes
+39,Hong Kong,male,Yes,Yes
+80,Hong Kong,male,No,Yes
+64,Hong Kong,female,No,Yes
+60,Hong Kong,male,No,Yes
+25,Hong Kong,male,No,Yes
+56,Hong Kong,female,No,Yes
+28,Hong Kong,female,No,Yes
+56,Hong Kong,male,No,Yes
+55,Hong Kong,female,No,Yes
+63,Hong Kong,female,No,Yes
+65,Hong Kong,female,No,Yes
+42,Hong Kong,male,No,Yes
+70,Hong Kong,male,No,Yes
+68,Hong Kong,male,No,No
+57,Hong Kong,female,No,No
+91,Hong Kong,female,No,No
+51,Hong Kong,female,No,No
+25,Hong Kong,female,No,No
+50,Hong Kong,female,No,No
+23,Hong Kong,male,No,No
+52,Hong Kong,male,No,Yes
+69,Hong Kong,male,No,Yes
+86,Hong Kong,female,No,Yes
+62,Hong Kong,female,No,Yes
+59,Hong Kong,male,No,Yes
+60,Hong Kong,female,No,Yes
+71,Hong Kong,male,No,Yes
+66,Hong Kong,male,No,Yes
+75,Hong Kong,male,No,Yes
+51,Hong Kong,male,No,Yes
+43,Hong Kong,male,No,Yes
+67,Hong Kong,female,No,Yes
+37,Hong Kong,male,No,Yes
+70,Hong Kong,male,Yes,Yes
+69,Hong Kong,male,No,Yes
+45,Hong Kong,male,No,Yes
+46,Hong Kong,female,No,Yes
+32,Hong Kong,female,No,No
+83,Hong Kong,female,No,No
+83,Hong Kong,female,No,No
+68,Hong Kong,male,No,Yes
+70,Hong Kong,female,No,Yes
+38,Hong Kong,female,No,Yes
+58,Hong Kong,male,No,Yes
+48,Hong Kong,male,No,Yes
+96,Hong Kong,female,No,Yes
+68,Hong Kong,male,No,Yes
+62,Hong Kong,male,No,Yes
+76,Hong Kong,female,No,Yes
+35,Hong Kong,male,No,Yes
+57,Hong Kong,female,No,Yes
+68,Hong Kong,female,No,Yes
+58,Hong Kong,female,No,No
+57,Hong Kong,male,No,No
+33,Hong Kong,male,No,No
+55,Hong Kong,female,No,No
+60,Hong Kong,female,No,Yes
+21,Hong Kong,female,No,Yes
+16,Hong Kong,male,No,Yes
+29,Hong Kong,female,No,Yes
+26,Hong Kong,male,No,Yes
+70,Hong Kong,female,No,Yes
